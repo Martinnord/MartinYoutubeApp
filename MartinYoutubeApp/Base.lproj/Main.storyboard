@@ -70,7 +70,7 @@
                                 <rect key="frame" x="0.0" y="173" width="375" height="494"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="VideoCellTableViewCell" rowHeight="91" id="kAf-VZ-MJ3" customClass="VideoCellTableViewCell" customModule="MartinYoutubeApp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="VideoCell" rowHeight="91" id="kAf-VZ-MJ3" customClass="VideoCell" customModule="MartinYoutubeApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="91"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kAf-VZ-MJ3" id="ptl-La-ryr">
@@ -103,8 +103,8 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="videoPreviewImage" destination="1ka-fN-7q4" id="6n9-re-Qhn"/>
-                                            <outlet property="videoTitle" destination="51p-1R-anQ" id="tLS-dy-ivj"/>
+                                            <outlet property="videoPreviewImage" destination="1ka-fN-7q4" id="h7u-ck-B4a"/>
+                                            <outlet property="videoTitle" destination="51p-1R-anQ" id="0fz-Am-98m"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

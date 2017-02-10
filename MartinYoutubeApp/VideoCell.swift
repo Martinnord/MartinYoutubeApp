@@ -8,7 +8,7 @@
 
 import UIKit
 
-class VideoCellTableViewCell: UITableViewCell {
+class VideoCell: UITableViewCell {
 
     @IBOutlet weak var videoPreviewImage: UIImageView!
     
@@ -21,8 +21,20 @@ class VideoCellTableViewCell: UITableViewCell {
 
     func updateUI(youtubeModel: YoutubeModel) { // Updates the data inside a cell so it can be recycled
         videoTitle.text = youtubeModel.videoTitle
-        //TODO: Set img from url
+        // When downloading from internet use async
+        let url = URL(string: youtubeModel.imageURL)!
         
+        // Downloads a image on a background thread
+        DispatchQueue.global().async {
+            do {
+                let data = try Data(contentsOf: url)
+                DispatchQueue.global().sync {
+                    self.videoPreviewImage.image = UIImage(data: data)
+                }
+            } catch {
+                // Handle the error
+            }
+        }
     }
 
 }
